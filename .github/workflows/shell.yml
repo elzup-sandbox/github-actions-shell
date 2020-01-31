@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  playground_mac:
+    runs-on: macos-latest
+    steps:
+      - name: shell
+        run: ifconfig en0 | awk '$1 == "inet" {print $2}'
+  playground_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: shell
+        run: ifconfig en0 | awk '$1 == "inet" {print $2}'
+  playground_win:
+    runs-on: windows-latest
+    steps:
+      - name: shell
+        run: ifconfig en0 | awk '$1 == "inet" {print $2}'
