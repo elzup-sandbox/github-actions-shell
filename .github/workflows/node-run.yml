@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  playground_linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: node
+      run: node index.js
