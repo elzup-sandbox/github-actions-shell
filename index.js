@@ -6,3 +6,6 @@ const fixedDate = new Date(Date.now() + (offset + 9 * 60) * 60 * 1000);
 console.log({ date, offset });
 console.log(` date hour: ${date.getHours()}`);
 console.log(`fdate hour: ${fixedDate.getHours()}`);
+
+console.log(` date +ts: ${+date}`);
+console.log(`fdate +ts: ${+fixedDate}`);
