@@ -18,4 +18,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: shell
-        run: ifconfig en0 | awk '$1 == "inet" {print $2}'
+        run: ipconfig | find "IPv4"
